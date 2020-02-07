@@ -5,16 +5,16 @@
 # Source0 file verified with key 0x3B2D400CE5BBCA60 (m@robenolt.com)
 #
 Name     : ua-parser
-Version  : 0.8.0
-Release  : 6
-URL      : https://files.pythonhosted.org/packages/b0/02/94ea43fc432fb112fbb62a89855317c41c210fb5239a2ed9b94ecb63024f/ua-parser-0.8.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b0/02/94ea43fc432fb112fbb62a89855317c41c210fb5239a2ed9b94ecb63024f/ua-parser-0.8.0.tar.gz
-Source99 : https://files.pythonhosted.org/packages/b0/02/94ea43fc432fb112fbb62a89855317c41c210fb5239a2ed9b94ecb63024f/ua-parser-0.8.0.tar.gz.asc
+Version  : 0.9.0
+Release  : 7
+URL      : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz.asc
 Summary  : Python port of Browserscope's user agent parser
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: ua-parser-python3
-Requires: ua-parser-python
+Requires: ua-parser-python = %{version}-%{release}
+Requires: ua-parser-python3 = %{version}-%{release}
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
 
@@ -27,7 +27,7 @@ formerly https://github.com/tobie/ua-parser)
 %package python
 Summary: python components for the ua-parser package.
 Group: Default
-Requires: ua-parser-python3
+Requires: ua-parser-python3 = %{version}-%{release}
 
 %description python
 python components for the ua-parser package.
@@ -43,19 +43,28 @@ python3 components for the ua-parser package.
 
 
 %prep
-%setup -q -n ua-parser-0.8.0
+%setup -q -n ua-parser-0.9.0
+cd %{_builddir}/ua-parser-0.9.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1534858722
-python3 setup.py build -b py3
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1581054591
+# -Werror is for werrorists
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----

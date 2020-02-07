@@ -1,5 +1,5 @@
 PKG_NAME := ua-parser
-URL = https://files.pythonhosted.org/packages/b0/02/94ea43fc432fb112fbb62a89855317c41c210fb5239a2ed9b94ecb63024f/ua-parser-0.8.0.tar.gz
+URL = https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
