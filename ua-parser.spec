@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3B2D400CE5BBCA60 (m@robenolt.com)
 #
 Name     : ua-parser
-Version  : 0.9.0
-Release  : 7
-URL      : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/91/f6/d574a5795c9776eb4ecf9a5f7ef191d31a89fbdf1cc3437b5d2efc26716c/ua-parser-0.9.0.tar.gz.asc
+Version  : 0.10.0
+Release  : 8
+URL      : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz.asc
 Summary  : Python port of Browserscope's user agent parser
 Group    : Development/Tools
 License  : Apache-2.0
@@ -43,15 +43,15 @@ python3 components for the ua-parser package.
 
 
 %prep
-%setup -q -n ua-parser-0.9.0
-cd %{_builddir}/ua-parser-0.9.0
+%setup -q -n ua-parser-0.10.0
+cd %{_builddir}/ua-parser-0.10.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581054591
+export SOURCE_DATE_EPOCH=1582826706
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
