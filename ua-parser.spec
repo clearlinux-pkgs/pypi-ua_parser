@@ -6,7 +6,7 @@
 #
 Name     : ua-parser
 Version  : 0.10.0
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz.asc
@@ -46,7 +46,7 @@ python components for the ua-parser package.
 Summary: python3 components for the ua-parser package.
 Group: Default
 Requires: python3-core
-Provides: pypi(ua-parser)
+Provides: pypi(ua_parser)
 
 %description python3
 python3 components for the ua-parser package.
@@ -61,8 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582907227
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583698437
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
