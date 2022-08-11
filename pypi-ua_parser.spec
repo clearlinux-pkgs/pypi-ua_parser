@@ -6,7 +6,7 @@
 #
 Name     : pypi-ua_parser
 Version  : 0.10.0
-Release  : 32
+Release  : 33
 URL      : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/92/68/b5c60fc7386d95de9d66a42b9a9d4898d74de895368964b198003042e297/ua-parser-0.10.0.tar.gz.asc
