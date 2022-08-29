@@ -1,5 +1,5 @@
 PKG_NAME := pypi-ua_parser
-URL = https://files.pythonhosted.org/packages/41/a6/141d256db13675ba1668f25b8566a7a6d6ceaae27e1df393c62443b88667/ua-parser-0.16.0.tar.gz
+URL = https://files.pythonhosted.org/packages/ab/e0/6be7ec0f1d3a485126fcce33c34ff8c41745e5b5ad43e500037f30e40064/ua-parser-0.16.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
