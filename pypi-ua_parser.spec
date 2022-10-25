@@ -4,7 +4,7 @@
 #
 Name     : pypi-ua_parser
 Version  : 0.16.1
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/ab/e0/6be7ec0f1d3a485126fcce33c34ff8c41745e5b5ad43e500037f30e40064/ua-parser-0.16.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ab/e0/6be7ec0f1d3a485126fcce33c34ff8c41745e5b5ad43e500037f30e40064/ua-parser-0.16.1.tar.gz
 Summary  : Python port of Browserscope's user agent parser
