@@ -7,7 +7,7 @@
 #
 Name     : pypi-ua_parser
 Version  : 1.0.0
-Release  : 54
+Release  : 55
 URL      : https://files.pythonhosted.org/packages/3b/2e/07e1cdba081f64d5128637723ae5c077ef1602f7beab32a83f36c0d93614/ua_parser-1.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3b/2e/07e1cdba081f64d5128637723ae5c077ef1602f7beab32a83f36c0d93614/ua_parser-1.0.0.tar.gz
 Summary  : Python port of Browserscope's user agent parser
@@ -60,6 +60,7 @@ Group: Default
 Requires: python3-core
 Provides: pypi(ua_parser)
 Requires: pypi(ua_parser_builtins)
+Provides: pypi(ua_parser_builtins)
 
 %description python3
 python3 components for the pypi-ua_parser package.
@@ -77,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735318555
+export SOURCE_DATE_EPOCH=1735321939
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
